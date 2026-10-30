@@ -341,7 +341,7 @@ impl<A: Step> RangeFromIter<A> {
     /// let mut iter = range.into_iter();
     /// assert_eq!(iter.clone().remainder(), range);
     /// iter.next();
-    /// assert_eq!(iter.remainder(), core::range::RangeFrom::from(4..));
+    /// assert_eq!(iter.remainder(), Some(core::range::RangeFrom::from(4..)));
     /// ```
     #[inline]
     #[rustc_inherit_overflow_checks]
